@@ -22,8 +22,8 @@ df = pd.read_csv('penguins.csv')
 # df.head()
 # sl= st.slider('Row?', 0, df.index[-1], 25)
 # st.title('Penguin data')
-# if 'count' not in st.session_state:
-#     st.session_state.count = 0
+if 'count' not in st.session_state:
+    st.session_state.count = 0
 
 increment = st.button('Increment')
 if increment:
