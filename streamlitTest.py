@@ -1,3 +1,4 @@
+from itertools import count
 import streamlit as st
 import pandas as pd
 
@@ -10,7 +11,4 @@ def goUp():
 
 st.button(str(st.session_state.count), key=None, help=None, on_click=goUp);
 
-
-df = pd.read_csv("penguins.csv");
-
-st.write(df[st.session_state.count:st.session_state.count+1]);
+st.write((st.session_state['count']));
