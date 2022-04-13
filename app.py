@@ -54,7 +54,8 @@ st.write(df.iloc[0:st.session_state.count+1])
 comment = st.text_input("write something")
 # co.execute("""INSERT INTO example VALUES(?)""", (comment,))
 f.write(comment)
-f.write("\n")
+if(comment):
+    f.write("\n")
 
 Lines.append(comment)
 
@@ -62,4 +63,3 @@ count = 0
 for line in Lines:
     count += 1
     st.write(count, line)
-
