@@ -20,6 +20,9 @@ import pandas as pd
 
 df = pd.read_csv('penguins.csv')
 f = open("demo.txt", "a")
+
+file1 = open('demo.txt', 'r')
+Lines = file1.readlines()
 # df.head()
 # sl= st.slider('Row?', 0, df.index[-1], 25)
 # st.title('Penguin data')
@@ -35,10 +38,10 @@ st.write(df.iloc[0:st.session_state.count+1])
 comment = st.text_input("write something")
 
 # st.write('comment:', comment)
-f.write(comment, "\n")
+f.write(comment)
+f.write("\n")
 
-file1 = open('demo.txt', 'r')
-Lines = file1.readlines()
+Lines.append(comment)
 
 for line in Lines:
     st.write(line)
