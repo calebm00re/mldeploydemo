@@ -34,7 +34,7 @@ co.execute("""INSERT INTO example VALUES(?)""", (comment,))
 
 Lines.append(comment)
 
-# count = 0
+count = 0
 for line in Lines:
     count += 1
     st.write(count, line)
