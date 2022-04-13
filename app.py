@@ -34,4 +34,11 @@ st.write(df.iloc[0:st.session_state.count+1])
 
 comment = st.text_input("write something")
 
-st.write('comment:', comment)
+# st.write('comment:', comment)
+f.write(comment, "\n")
+
+file1 = open('demo.txt', 'r')
+Lines = file1.readlines()
+
+for line in Lines:
+    st.write(line)
