@@ -19,6 +19,7 @@ import pandas as pd
 
 
 df = pd.read_csv('penguins.csv')
+f = open("demo.txt", "a")
 # df.head()
 # sl= st.slider('Row?', 0, df.index[-1], 25)
 # st.title('Penguin data')
@@ -30,3 +31,7 @@ if increment:
     st.session_state.count += 1
 
 st.write(df.iloc[0:st.session_state.count+1])
+
+comment = st.text_input("write something")
+
+st.write('comment:', comment)
