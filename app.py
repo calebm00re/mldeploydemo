@@ -43,5 +43,8 @@ f.write("\n")
 
 Lines.append(comment)
 
+count = 0
 for line in Lines:
-    st.write(line)
+    count += 1
+    st.write(count, line)
+
